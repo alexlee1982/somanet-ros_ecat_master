@@ -1,0 +1,5 @@
+<map id="motor_config_request" name="motor_config_request">
+<area shape="rect" id="node3" href="$d3/d20/ctrlproto__m_8c.html#a50d3284c9acb0b4030c6dc68973ecb0d" title="init_master" alt="" coords="201,5,287,35"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#a49c51c78e63c4914965e20585f3366aa" title="ecat_master" alt="" coords="337,5,431,35"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="480,5,531,35"/>
+</map>

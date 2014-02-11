@@ -1,0 +1,5 @@
+<map id="sdo_motor_config_update" name="sdo_motor_config_update">
+<area shape="rect" id="node3" href="$d3/d20/ctrlproto__m_8c.html#a7abf81961eb7701b2bf8b75923f0c0c8" title="_motor_config_update" alt="" coords="225,32,375,61"/>
+<area shape="rect" id="node5" href="$d3/d20/ctrlproto__m_8c.html#a817728547a5a3b5cc2e753e6f58862d0" title="read_sdo" alt="" coords="427,5,501,35"/>
+<area shape="rect" id="node7" href="$d3/d20/ctrlproto__m_8c.html#a178fe9f923c58e401c1f0652bb188957" title="write_sdo" alt="" coords="425,59,503,88"/>
+</map>

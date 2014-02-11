@@ -1,0 +1,6 @@
+<map id="shutdown_operation" name="shutdown_operation">
+<area shape="rect" id="node3" href="$d6/d95/drive__function_8c.html#abde1e656f6cc97a444646fcbc8868c26" title="check_shutdown_active" alt="" coords="192,5,355,35"/>
+<area shape="rect" id="node5" href="$d9/dc6/ctrlproto__m_8h.html#a00821d9de439608a8cf6cd4608f8aadd" title="pdo_handle_ecat" alt="" coords="213,59,333,88"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="215,112,332,141"/>
+<area shape="rect" id="node9" href="$d6/d95/drive__function_8c.html#a9204ca30707c3d2a0dccd3cab4d403fd" title="set_controlword" alt="" coords="216,165,331,195"/>
+</map>

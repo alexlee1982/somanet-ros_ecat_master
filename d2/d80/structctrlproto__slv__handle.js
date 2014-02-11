@@ -1,0 +1,28 @@
+var structctrlproto__slv__handle =
+[
+    [ "__ecat_slave_in", "d2/d80/structctrlproto__slv__handle.html#a4eeacfe2a1117dd17998cd5332a72052", null ],
+    [ "__ecat_slave_out", "d2/d80/structctrlproto__slv__handle.html#af0514569859b6a40b836d603f6b86347", null ],
+    [ "__pdo_entry", "d2/d80/structctrlproto__slv__handle.html#a5f1e736d4f003e6c10afaafafbacd675", null ],
+    [ "__pdo_info", "d2/d80/structctrlproto__slv__handle.html#a67dad1b203e60fade79ab6a80514dcaf", null ],
+    [ "__request", "d2/d80/structctrlproto__slv__handle.html#aaba577a86726ba408a95d55beba32219", null ],
+    [ "__start", "d2/d80/structctrlproto__slv__handle.html#a83fb45a5bed7752639e9a20941ca24fa", null ],
+    [ "__sync_info", "d2/d80/structctrlproto__slv__handle.html#a604acef6f739f419d367ca4f2dab264a", null ],
+    [ "factor_torq", "d2/d80/structctrlproto__slv__handle.html#a3cccbd900adddcc57ce6be2525b45801", null ],
+    [ "is_responding", "d2/d80/structctrlproto__slv__handle.html#a01c42821c17fc208382c8bbaee976349", null ],
+    [ "motor_config_param", "d2/d80/structctrlproto__slv__handle.html#aca458ea32f92fd9b8c246287b57dfdfd", null ],
+    [ "motorctrl_out", "d2/d80/structctrlproto__slv__handle.html#a2031b7e909b36cc6b70f7eb91cfe17f3", null ],
+    [ "motorctrl_status_in", "d2/d80/structctrlproto__slv__handle.html#a16d815c067bd3ba8180e90d495990de6", null ],
+    [ "operation_mode", "d2/d80/structctrlproto__slv__handle.html#ad925f570105a8b881d3f85036bdec6a1", null ],
+    [ "operation_mode_disp", "d2/d80/structctrlproto__slv__handle.html#a17cc012282650929aa83a2cac82e1427", null ],
+    [ "position_in", "d2/d80/structctrlproto__slv__handle.html#ab6bf7e06f238faa019148ea780fa9e6e", null ],
+    [ "position_setpoint", "d2/d80/structctrlproto__slv__handle.html#a2e3a4e11eadd434c8868aedc9e2f5f73", null ],
+    [ "slave_alias", "d2/d80/structctrlproto__slv__handle.html#a35b32cbf87323d58d31a16af8afd45b7", null ],
+    [ "slave_config", "d2/d80/structctrlproto__slv__handle.html#aa99eaa2c16572a21e6b2c69a7628cdbf", null ],
+    [ "slave_pos", "d2/d80/structctrlproto__slv__handle.html#a7e0f015e6f510b04656dad6a49365f3f", null ],
+    [ "slave_productid", "d2/d80/structctrlproto__slv__handle.html#a079e5aaeb30eec8c5c35f233a660c13f", null ],
+    [ "slave_vendorid", "d2/d80/structctrlproto__slv__handle.html#a643d764daeb066531eab59c402db784f", null ],
+    [ "speed_in", "d2/d80/structctrlproto__slv__handle.html#a9b36b744019197270292307fd031b579", null ],
+    [ "speed_setpoint", "d2/d80/structctrlproto__slv__handle.html#a5533db53b23b42893994d911c45bfc8f", null ],
+    [ "torque_in", "d2/d80/structctrlproto__slv__handle.html#a23ec4ef8ff5c79a417368c1b1d604c4a", null ],
+    [ "torque_setpoint", "d2/d80/structctrlproto__slv__handle.html#aea423eeeae51dec3cce35ddf83bf9244", null ]
+];

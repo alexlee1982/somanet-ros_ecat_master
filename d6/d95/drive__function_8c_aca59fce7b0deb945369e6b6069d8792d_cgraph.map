@@ -1,0 +1,5 @@
+<map id="target_position_reached" name="target_position_reached">
+<area shape="rect" id="node3" href="$d6/d95/drive__function_8c.html#a62783faaee4dbff701a5c2bc60480bc3" title="check_target_reached" alt="" coords="215,5,364,35"/>
+<area shape="rect" id="node5" href="$d6/d95/drive__function_8c.html#a827517d8c4ac3000580bfb82904ed896" title="Gets actual position. " alt="" coords="223,58,356,105"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="231,128,348,157"/>
+</map>

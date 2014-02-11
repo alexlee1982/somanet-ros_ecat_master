@@ -1,0 +1,27 @@
+<map id="motor_config" name="motor_config">
+<area shape="rect" id="node2" href="$d5/d58/structqei__commutation__offset__cclk__s.html" title="{qei_commutation_offset\l_cclk_s\n|+ qei_commutation_offset_cclk\l+ update_state\l|}" alt="" coords="5,5,208,125"/>
+<area shape="rect" id="node4" href="$db/dfb/structsoftware__position__min__s.html" title="{software_position_min_s\n|+ software_position_min\l+ update_state\l|}" alt="" coords="232,14,397,117"/>
+<area shape="rect" id="node6" href="$d8/dfb/structgear__ratio__s.html" title="{gear_ratio_s\n|+ gear_ratio\l+ update_state\l|}" alt="" coords="425,14,535,117"/>
+<area shape="rect" id="node8" href="$d7/dc3/structpolarity__s.html" title="{polarity_s\n|+ polarity\l+ update_state\l|}" alt="" coords="559,14,668,117"/>
+<area shape="rect" id="node10" href="$dc/da7/structposition__encoder__resolution__s.html" title="{position_encoder_resolution_s\n|+ position_encoder_resolution\l+ update_state\l|}" alt="" coords="692,14,889,117"/>
+<area shape="rect" id="node12" href="$df/d38/structqei__offset__cclk__s.html" title="{qei_offset_cclk_s\n|+ qei_offset_cclk\l+ update_state\l|}" alt="" coords="913,14,1036,117"/>
+<area shape="rect" id="node14" href="$d7/d43/structqei__commutation__offset__clk__s.html" title="{qei_commutation_offset\l_clk_s\n|+ qei_commutation_offset_clk\l+ update_state\l|}" alt="" coords="1060,5,1257,125"/>
+<area shape="rect" id="node16" href="$df/daa/structnominal__motor__speed__s.html" title="{nominal_motor_speed_s\n|+ nominal_motor_speed\l+ update_state\l|}" alt="" coords="1281,14,1444,117"/>
+<area shape="rect" id="node18" href="$d5/d0c/structtorque__slope__s.html" title="{torque_slope_s\n|+ torque_slope\l+ update_state\l|}" alt="" coords="1468,14,1577,117"/>
+<area shape="rect" id="node20" href="$db/d86/structmax__torque__s.html" title="{max_torque_s\n|+ max_torque\l+ update_state\l|}" alt="" coords="1601,14,1711,117"/>
+<area shape="rect" id="node22" href="$dd/d40/structsoftware__position__max__s.html" title="{software_position_max_s\n|+ software_position_max\l+ update_state\l|}" alt="" coords="1735,14,1905,117"/>
+<area shape="rect" id="node24" href="$d8/d9c/structmax__profile__velocity__s.html" title="{max_profile_velocity_s\n|+ max_profile_velocity\l+ update_state\l|}" alt="" coords="1929,14,2084,117"/>
+<area shape="rect" id="node26" href="$da/dc1/structvelocity__d__gain__s.html" title="{velocity_d_gain_s\n|+ d_gain\l+ update_state\l|}" alt="" coords="2108,14,2233,117"/>
+<area shape="rect" id="node28" href="$d7/d78/structprofile__deceleration__s.html" title="{profile_deceleration_s\n|+ profile_deceleration\l+ update_state\l|}" alt="" coords="2257,14,2404,117"/>
+<area shape="rect" id="node30" href="$de/d68/structvelocity__i__gain__s.html" title="{velocity_i_gain_s\n|+ i_gain\l+ update_state\l|}" alt="" coords="2428,14,2551,117"/>
+<area shape="rect" id="node32" href="$d1/d31/structmotor__torque__constant__s.html" title="{motor_torque_constant_s\n|+ motor_torque_constant\l+ update_state\l|}" alt="" coords="2575,14,2743,117"/>
+<area shape="rect" id="node34" href="$d2/d2d/structprofile__acceleration__s.html" title="{profile_acceleration_s\n|+ profile_acceleration\l+ update_state\l|}" alt="" coords="2767,14,2913,117"/>
+<area shape="rect" id="node36" href="$d5/db2/structvelocity__p__gain__s.html" title="{velocity_p_gain_s\n|+ p_gain\l+ update_state\l|}" alt="" coords="2937,14,3063,117"/>
+<area shape="rect" id="node38" href="$d2/d6a/structprofile__velocity__s.html" title="{profile_velocity_s\n|+ profile_velocity\l+ update_state\l|}" alt="" coords="3087,14,3209,117"/>
+<area shape="rect" id="node40" href="$de/dd0/structmax__acceleration__s.html" title="{max_acceleration_s\n|+ max_acceleration\l+ update_state\l|}" alt="" coords="3233,14,3372,117"/>
+<area shape="rect" id="node42" href="$d3/dcd/structpole__pair__s.html" title="{pole_pair_s\n|+ pole_pair\l+ update_state\l|}" alt="" coords="3396,14,3505,117"/>
+<area shape="rect" id="node44" href="$dd/db9/structnominal__current__s.html" title="{nominal_current_s\n|+ nominal_current\l+ update_state\l|}" alt="" coords="3529,14,3657,117"/>
+<area shape="rect" id="node46" href="$d3/dfa/structqei__offset__clk__s.html" title="{qei_offset_clk_s\n|+ qei_offset_clk\l+ update_state\l|}" alt="" coords="3681,14,3799,117"/>
+<area shape="rect" id="node48" href="$d4/d56/structquick__stop__deceleration__s.html" title="{quick_stop_deceleration_s\n|+ quick_stop_deceleration\l+ update_state\l|}" alt="" coords="3823,14,3999,117"/>
+<area shape="rect" id="node50" href="$da/df6/structsensor__selection__code__s.html" title="{sensor_selection_code_s\n|+ sensor_selection_code\l+ update_state\l|}" alt="" coords="4023,14,4191,117"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="_motor_config_update" name="_motor_config_update">
+<area shape="rect" id="node3" href="$d3/d20/ctrlproto__m_8c.html#acc8190751a4145842fcddb6bc08becec" title="sdo_motor_config_update" alt="" coords="205,5,376,35"/>
+<area shape="rect" id="node5" href="$d3/d20/ctrlproto__m_8c.html#a827866450965b816466cac893e815573" title="sdo_handle_ecat" alt="" coords="424,5,544,35"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#a0cec8e479890783e89dd0c542dbf97cf" title="Sets operation mode via defines for modes of operation in drive_config.h. " alt="" coords="592,5,731,35"/>
+<area shape="rect" id="node9" href="$df/d0a/main_8cpp.html#a49c51c78e63c4914965e20585f3366aa" title="ecat_master" alt="" coords="780,5,873,35"/>
+<area shape="rect" id="node11" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="923,5,973,35"/>
+</map>

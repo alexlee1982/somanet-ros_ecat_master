@@ -1,0 +1,8 @@
+<map id="quick_stop_position" name="quick_stop_position">
+<area shape="rect" id="node3" href="$d6/d95/drive__function_8c.html#aae831e27778e1d64eda8be8c46ae4a75" title="check_quick_stop_active" alt="" coords="193,5,361,35"/>
+<area shape="rect" id="node5" href="$d6/d95/drive__function_8c.html#a827517d8c4ac3000580bfb82904ed896" title="Gets actual position. " alt="" coords="211,58,344,105"/>
+<area shape="rect" id="node7" href="$d9/dc6/ctrlproto__m_8h.html#a00821d9de439608a8cf6cd4608f8aadd" title="pdo_handle_ecat" alt="" coords="217,128,337,157"/>
+<area shape="rect" id="node9" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="219,181,336,211"/>
+<area shape="rect" id="node11" href="$d6/d95/drive__function_8c.html#a9204ca30707c3d2a0dccd3cab4d403fd" title="set_controlword" alt="" coords="220,235,335,264"/>
+<area shape="rect" id="node13" href="$d6/d95/drive__function_8c.html#abf495e8aed18412383b26339a17cb58d" title="Sets target position cyclically for Cyclic Synchronous Position(CSP) mode only. " alt="" coords="208,288,347,317"/>
+</map>

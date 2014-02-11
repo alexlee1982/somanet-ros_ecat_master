@@ -1,0 +1,13 @@
+<map id="set_operation_mode" name="set_operation_mode">
+<area shape="rect" id="node3" href="$d6/d95/drive__function_8c.html#ac45212b9fb8fee1746715c5b53786020" title="check_ready" alt="" coords="217,5,313,35"/>
+<area shape="rect" id="node5" href="$d6/d95/drive__function_8c.html#a531ff8ee5cd44e6fa3af2ea7d5f38415" title="check_switch_enable" alt="" coords="192,59,339,88"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#a7fe77ef39e43c83e044f35ca57415737" title="check_switch_on" alt="" coords="204,112,327,141"/>
+<area shape="rect" id="node9" href="$d9/dc6/ctrlproto__m_8h.html#a00821d9de439608a8cf6cd4608f8aadd" title="pdo_handle_ecat" alt="" coords="205,165,325,195"/>
+<area shape="rect" id="node11" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="207,219,324,248"/>
+<area shape="rect" id="node13" href="$d9/dc6/ctrlproto__m_8h.html#a827866450965b816466cac893e815573" title="sdo_handle_ecat" alt="" coords="205,272,325,301"/>
+<area shape="rect" id="node23" href="$d6/d95/drive__function_8c.html#a9204ca30707c3d2a0dccd3cab4d403fd" title="set_controlword" alt="" coords="208,325,323,355"/>
+<area shape="rect" id="node15" href="$d3/d20/ctrlproto__m_8c.html#acc8190751a4145842fcddb6bc08becec" title="sdo_motor_config_update" alt="" coords="387,272,557,301"/>
+<area shape="rect" id="node17" href="$d3/d20/ctrlproto__m_8c.html#a7abf81961eb7701b2bf8b75923f0c0c8" title="_motor_config_update" alt="" coords="607,272,756,301"/>
+<area shape="rect" id="node19" href="$d3/d20/ctrlproto__m_8c.html#a178fe9f923c58e401c1f0652bb188957" title="write_sdo" alt="" coords="807,245,884,275"/>
+<area shape="rect" id="node21" href="$d3/d20/ctrlproto__m_8c.html#a817728547a5a3b5cc2e753e6f58862d0" title="read_sdo" alt="" coords="808,299,883,328"/>
+</map>

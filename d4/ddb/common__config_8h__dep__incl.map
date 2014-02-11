@@ -1,0 +1,11 @@
+<map id="include/common_config.h" name="include/common_config.h">
+<area shape="rect" id="node3" href="$dd/ded/bldc__motor__config__1_8h.html" title="include/bldc_motor\l_config_1.h" alt="" coords="5,83,136,130"/>
+<area shape="rect" id="node16" href="$d0/dd6/bldc__motor__config__2_8h.html" title="include/bldc_motor\l_config_2.h" alt="" coords="160,83,291,130"/>
+<area shape="rect" id="node19" href="$d3/d5e/bldc__motor__config__3_8h.html" title="include/bldc_motor\l_config_3.h" alt="" coords="315,83,445,130"/>
+<area shape="rect" id="node22" href="$df/dbf/bldc__motor__config__4_8h.html" title="include/bldc_motor\l_config_4.h" alt="" coords="469,83,600,130"/>
+<area shape="rect" id="node5" href="$d9/dc6/ctrlproto__m_8h.html" title="include/ctrlproto_m.h" alt="" coords="232,179,373,208"/>
+<area shape="rect" id="node7" href="$d9/df5/drive__function_8h.html" title="Motor Drive functions over Ethercat. " alt="" coords="108,256,265,285"/>
+<area shape="rect" id="node11" href="$df/d0a/main_8cpp.html" title="Example Master App for Profile Position (on PC) " alt="" coords="255,333,351,363"/>
+<area shape="rect" id="node13" href="$d3/d20/ctrlproto__m_8c.html" title="src/ctrlproto_m.c" alt="" coords="340,256,460,285"/>
+<area shape="rect" id="node9" href="$d6/d95/drive__function_8c.html" title="Motor Drive functions over Ethercat. " alt="" coords="95,333,231,363"/>
+</map>

@@ -1,0 +1,36 @@
+<map id="main" name="main">
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#a621ccd4245d1444502d9a68689abcc57" title="cb_move_joints" alt="" coords="105,272,217,301"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#a49c51c78e63c4914965e20585f3366aa" title="ecat_master" alt="" coords="115,325,208,355"/>
+<area shape="rect" id="node7" href="$d9/df5/drive__function_8h.html#a9edf9d009c8f7862df569f4922c0ac8e" title="Enables the operation mode specified. " alt="" coords="291,112,411,141"/>
+<area shape="rect" id="node11" href="$d9/dc6/ctrlproto__m_8h.html#a00821d9de439608a8cf6cd4608f8aadd" title="pdo_handle_ecat" alt="" coords="508,59,628,88"/>
+<area shape="rect" id="node17" href="$d9/df5/drive__function_8h.html#a827517d8c4ac3000580bfb82904ed896" title="Gets actual position. " alt="" coords="284,378,417,425"/>
+<area shape="rect" id="node19" href="$d9/dc6/ctrlproto__m_8h.html#a50d3284c9acb0b4030c6dc68973ecb0d" title="init_master" alt="" coords="308,448,393,477"/>
+<area shape="rect" id="node27" href="$d9/df5/drive__function_8h.html#a37b677a0234e9aa4c92a6b8ef4ee6c1f" title="Initialize node with basic motor configurations via bldc_motor_config.h. " alt="" coords="313,165,388,195"/>
+<area shape="rect" id="node31" href="$de/d45/profile_8h.html#a78c4ed47dfc676bd403debc25911b72c" title="Initialise Position Profile Limits. " alt="" coords="284,501,417,547"/>
+<area shape="rect" id="node33" href="$d9/df5/drive__function_8h.html#ac2ae4a24331aff80f689d2dcf8927fc3" title="Initialize Position Profile parameters. " alt="" coords="284,570,417,617"/>
+<area shape="rect" id="node38" href="$de/d45/profile_8h.html#a35cb66482e937f4dcbf9ce3b44d7458e" title="Generate Position Profile. " alt="" coords="268,640,433,669"/>
+<area shape="rect" id="node40" href="$d9/df5/drive__function_8h.html#a79cdccfc31a5fb0b3ffaba9ade51e985" title="Quick Stop Position. " alt="" coords="283,272,419,301"/>
+<area shape="rect" id="node51" href="$d9/df5/drive__function_8h.html#ab9febc483aecfc1677eb3dcc648d84c5" title="Enable control after quick stop operation. " alt="" coords="272,59,429,88"/>
+<area shape="rect" id="node55" href="$d9/df5/drive__function_8h.html#a0cec8e479890783e89dd0c542dbf97cf" title="Sets operation mode via defines for modes of operation in drive_config.h. " alt="" coords="281,325,420,355"/>
+<area shape="rect" id="node76" href="$d9/df5/drive__function_8h.html#abf495e8aed18412383b26339a17cb58d" title="Sets target position cyclically for Cyclic Synchronous Position(CSP) mode only. " alt="" coords="281,693,420,723"/>
+<area shape="rect" id="node78" href="$d9/df5/drive__function_8h.html#a8c79d09dd66df7413aa92d3908cfa413" title="Shuts down the operation mode selected. " alt="" coords="281,219,420,248"/>
+<area shape="rect" id="node9" href="$d6/d95/drive__function_8c.html#ac63c79a0f62297c26d397611b22094c0" title="check_op_enable" alt="" coords="507,5,629,35"/>
+<area shape="rect" id="node13" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="509,219,627,248"/>
+<area shape="rect" id="node15" href="$d6/d95/drive__function_8c.html#a9204ca30707c3d2a0dccd3cab4d403fd" title="set_controlword" alt="" coords="511,112,625,141"/>
+<area shape="rect" id="node21" href="$d3/d20/ctrlproto__m_8c.html#a0737c1abf605ef4665e9003b410ec9d2" title="motor_config_request" alt="" coords="495,715,641,744"/>
+<area shape="rect" id="node25" href="$d3/d20/ctrlproto__m_8c.html#af675374954cdabdf63d036fe3c12d348" title="signal_handler" alt="" coords="516,661,620,691"/>
+<area shape="rect" id="node23" href="$d3/d20/ctrlproto__m_8c.html#a1c01c0729e43d0fa1a550f2a64791826" title="_config_sdo_request" alt="" coords="716,715,857,744"/>
+<area shape="rect" id="node35" href="$de/d45/profile_8h.html#a80aa7596c98c1d05289c5bfe94faec59" title="Initialise Position Profile. " alt="" coords="501,768,635,797"/>
+<area shape="rect" id="node42" href="$d6/d95/drive__function_8c.html#aae831e27778e1d64eda8be8c46ae4a75" title="check_quick_stop_active" alt="" coords="484,272,652,301"/>
+<area shape="rect" id="node44" href="$d6/d95/drive__function_8c.html#a827517d8c4ac3000580bfb82904ed896" title="Gets actual position. " alt="" coords="501,325,635,371"/>
+<area shape="rect" id="node49" href="$d6/d95/drive__function_8c.html#abf495e8aed18412383b26339a17cb58d" title="Sets target position cyclically for Cyclic Synchronous Position(CSP) mode only. " alt="" coords="499,395,637,424"/>
+<area shape="rect" id="node57" href="$d6/d95/drive__function_8c.html#ac45212b9fb8fee1746715c5b53786020" title="check_ready" alt="" coords="520,501,616,531"/>
+<area shape="rect" id="node59" href="$d6/d95/drive__function_8c.html#a531ff8ee5cd44e6fa3af2ea7d5f38415" title="check_switch_enable" alt="" coords="495,555,641,584"/>
+<area shape="rect" id="node61" href="$d6/d95/drive__function_8c.html#a7fe77ef39e43c83e044f35ca57415737" title="check_switch_on" alt="" coords="507,608,629,637"/>
+<area shape="rect" id="node65" href="$d9/dc6/ctrlproto__m_8h.html#a827866450965b816466cac893e815573" title="sdo_handle_ecat" alt="" coords="508,448,628,477"/>
+<area shape="rect" id="node67" href="$d3/d20/ctrlproto__m_8c.html#acc8190751a4145842fcddb6bc08becec" title="sdo_motor_config_update" alt="" coords="701,448,872,477"/>
+<area shape="rect" id="node69" href="$d3/d20/ctrlproto__m_8c.html#a7abf81961eb7701b2bf8b75923f0c0c8" title="_motor_config_update" alt="" coords="921,448,1071,477"/>
+<area shape="rect" id="node71" href="$d3/d20/ctrlproto__m_8c.html#a817728547a5a3b5cc2e753e6f58862d0" title="read_sdo" alt="" coords="1123,421,1197,451"/>
+<area shape="rect" id="node73" href="$d3/d20/ctrlproto__m_8c.html#a178fe9f923c58e401c1f0652bb188957" title="write_sdo" alt="" coords="1121,475,1199,504"/>
+<area shape="rect" id="node80" href="$d6/d95/drive__function_8c.html#abde1e656f6cc97a444646fcbc8868c26" title="check_shutdown_active" alt="" coords="487,165,649,195"/>
+</map>

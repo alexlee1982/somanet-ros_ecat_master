@@ -1,0 +1,8 @@
+<map id="quick_stop_torque" name="quick_stop_torque">
+<area shape="rect" id="node3" href="$d6/d95/drive__function_8c.html#af5f16f6a0819f40bc83732b29501daf2" title="quick_stop" alt="" coords="181,112,267,141"/>
+<area shape="rect" id="node5" href="$d6/d95/drive__function_8c.html#aae831e27778e1d64eda8be8c46ae4a75" title="check_quick_stop_active" alt="" coords="320,5,488,35"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#ac911c91e05ae3ed0ff7aaa1cf7985e9e" title="check_quick_stop_inactive" alt="" coords="315,59,493,88"/>
+<area shape="rect" id="node9" href="$d9/dc6/ctrlproto__m_8h.html#a00821d9de439608a8cf6cd4608f8aadd" title="pdo_handle_ecat" alt="" coords="344,112,464,141"/>
+<area shape="rect" id="node11" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="345,165,463,195"/>
+<area shape="rect" id="node13" href="$d6/d95/drive__function_8c.html#a9204ca30707c3d2a0dccd3cab4d403fd" title="set_controlword" alt="" coords="347,219,461,248"/>
+</map>

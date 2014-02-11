@@ -1,0 +1,5 @@
+<map id="init_master" name="init_master">
+<area shape="rect" id="node3" href="$d3/d20/ctrlproto__m_8c.html#a0737c1abf605ef4665e9003b410ec9d2" title="motor_config_request" alt="" coords="141,5,288,35"/>
+<area shape="rect" id="node7" href="$d3/d20/ctrlproto__m_8c.html#af675374954cdabdf63d036fe3c12d348" title="signal_handler" alt="" coords="163,59,267,88"/>
+<area shape="rect" id="node5" href="$d3/d20/ctrlproto__m_8c.html#a1c01c0729e43d0fa1a550f2a64791826" title="_config_sdo_request" alt="" coords="337,5,479,35"/>
+</map>

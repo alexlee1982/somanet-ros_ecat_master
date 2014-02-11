@@ -1,0 +1,5 @@
+<map id="target_torque_reached" name="target_torque_reached">
+<area shape="rect" id="node3" href="$d6/d95/drive__function_8c.html#a62783faaee4dbff701a5c2bc60480bc3" title="check_target_reached" alt="" coords="213,5,363,35"/>
+<area shape="rect" id="node5" href="$d6/d95/drive__function_8c.html#a0f73f2002fc6a4e43d1cf4d88f002a01" title="Gets actual torque. " alt="" coords="207,59,369,88"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#ad8e30f01de1592936f653c57ce2c5638" title="read_statusword" alt="" coords="229,112,347,141"/>
+</map>

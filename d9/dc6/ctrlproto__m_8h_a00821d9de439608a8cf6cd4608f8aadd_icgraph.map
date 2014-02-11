@@ -1,0 +1,14 @@
+<map id="pdo_handle_ecat" name="pdo_handle_ecat">
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#a49c51c78e63c4914965e20585f3366aa" title="ecat_master" alt="" coords="404,163,497,192"/>
+<area shape="rect" id="node7" href="$d6/d95/drive__function_8c.html#a9edf9d009c8f7862df569f4922c0ac8e" title="Enables the operation mode specified. " alt="" coords="193,163,313,192"/>
+<area shape="rect" id="node10" href="$d6/d95/drive__function_8c.html#a37b677a0234e9aa4c92a6b8ef4ee6c1f" title="Initialize node with basic motor configurations via bldc_motor_config.h. " alt="" coords="216,216,291,245"/>
+<area shape="rect" id="node13" href="$d6/d95/drive__function_8c.html#af5f16f6a0819f40bc83732b29501daf2" title="quick_stop" alt="" coords="211,429,296,459"/>
+<area shape="rect" id="node19" href="$d6/d95/drive__function_8c.html#a79cdccfc31a5fb0b3ffaba9ade51e985" title="Quick Stop Position. " alt="" coords="185,269,321,299"/>
+<area shape="rect" id="node22" href="$d6/d95/drive__function_8c.html#ab9febc483aecfc1677eb3dcc648d84c5" title="Enable control after quick stop operation. " alt="" coords="175,376,332,405"/>
+<area shape="rect" id="node25" href="$d6/d95/drive__function_8c.html#a4d64c163f07b97ee96e4fe54eff4382c" title="renable_velocity_ctrl" alt="" coords="183,323,324,352"/>
+<area shape="rect" id="node27" href="$d6/d95/drive__function_8c.html#a0cec8e479890783e89dd0c542dbf97cf" title="Sets operation mode via defines for modes of operation in drive_config.h. " alt="" coords="184,5,323,35"/>
+<area shape="rect" id="node30" href="$d6/d95/drive__function_8c.html#a8c79d09dd66df7413aa92d3908cfa413" title="Shuts down the operation mode selected. " alt="" coords="184,59,323,88"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="568,163,619,192"/>
+<area shape="rect" id="node15" href="$d6/d95/drive__function_8c.html#a84449edb1db4cb0cec242f99686ec001" title="Quick Stop Torque. " alt="" coords="387,456,515,485"/>
+<area shape="rect" id="node17" href="$d6/d95/drive__function_8c.html#a7610ba617339a9c7675544959a149d65" title="Quick Stop Velocity. " alt="" coords="383,403,519,432"/>
+</map>
