@@ -14,11 +14,6 @@ Further information
 ros_ecat_master `DOCUMENTATION`_.
 
 
-Known Issues
-=======
-
-   None
-
 Licence
 =======
 
@@ -33,6 +28,6 @@ Changelog
 
 .. _DOCUMENTATION: http://synapticon.github.io/ros_ecat_master/
 .. _1.0-rc1: None
-.. _LICENSE: https://github.com/synapticon/ros_ecat_master/blob/master/LICENSE
+.. _LICENSE: https://github.com/sncn-hub/somanet-ros_ecat_master/blob/master/LICENSE
 
 
