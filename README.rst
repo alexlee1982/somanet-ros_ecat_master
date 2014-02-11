@@ -27,7 +27,7 @@ Changelog
 
 
 .. _DOCUMENTATION: http://sncn-hub.github.io/somanet-ros_ecat_master
-.. _1.0-rc1: https://github.com/sncn-hub/somanet-ros_ecat_master/releases/tag/1.0
+.. _1.0: https://github.com/sncn-hub/somanet-ros_ecat_master/releases/tag/1.0
 .. _LICENSE: https://github.com/sncn-hub/somanet-ros_ecat_master/blob/master/LICENSE
 
 
