@@ -26,7 +26,7 @@ Changelog
 * `1.0`_ (2012-02-11)
 
 
-.. _DOCUMENTATION: http://synapticon.github.io/ros_ecat_master/
+.. _DOCUMENTATION: http://synapticon.github.io/somanet-ros_ecat_master/
 .. _1.0-rc1: None
 .. _LICENSE: https://github.com/sncn-hub/somanet-ros_ecat_master/blob/master/LICENSE
 
