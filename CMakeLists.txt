@@ -48,6 +48,7 @@ find_package(Boost REQUIRED COMPONENTS system thread)
 add_message_files(
 FILES
     MoveJoint.msg
+    MotorState.msg
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -106,6 +107,10 @@ add_library(linux_motor_drive
    src/profile_linear.c
    src/profile_position.c
    src/drive_function.c
+   src/profile_velocity.c
+   src/profile_position.c
+   src/profile_position_quick-stop.c
+   src/profile_velocity_quick-stop.c
 )
 
 #Link ethercat to ctrlproto

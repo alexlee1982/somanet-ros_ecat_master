@@ -1,40 +1,10 @@
 
 /**
- *
- * \file ctrlproto_m.h
- *
- *
- * Copyright (c) 2014, Synapticon GmbH
- * All rights reserved.
- * Author: Pavan Kanajar <pkanajar@synapticon.com>, Christian Holl <choll@synapticon.com>
- * 			& Frank Jeschke <jeschke@fjes.de>
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
- * 3. Execution of this software or parts of it exclusively takes place on hardware
- *    produced by Synapticon GmbH.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * The views and conclusions contained in the software and documentation are those
- * of the authors and should not be interpreted as representing official policies,
- * either expressed or implied, of the Synapticon GmbH.
- *
+ * @file ctrlproto_m.h
+ * @brief Ethercat control protocol
+ * @author Pavan Kanajar <pkanajar@synapticon.com>
+ * @author Frank Jeschke <jeschke@fjes.de>
+ * @author Christian Holl <choll@synapticon.com>
  */
 
 #ifndef CTRLPROTO_M_H_
@@ -44,11 +14,11 @@
 #include <ecrt.h>
 #include <inttypes.h>
 #include <motor_define.h>
-#include "bldc_motor_config_1.h"
-#include "bldc_motor_config_2.h"
-#include "bldc_motor_config_3.h"
-#include "bldc_motor_config_4.h"
+#include <profile.h>
+#include <bldc_motor_config_1.h>
+#include <bldc_motor_config_2.h>
 
+#define FREQUENCY 	1000	// Hz
 
 #ifdef __cplusplus
 extern "C"
@@ -152,17 +122,17 @@ ec_sync_info_t ctrlproto_syncs[] = {\
 		{POLARITY(CONFIG_NUMBER), 0},\
 		{SENSOR_SELECTION_CODE(CONFIG_NUMBER), 0},\
 		\
-		{(16384*VELOCITY_Kp_NUMERATOR(CONFIG_NUMBER) )/VELOCITY_Kp_DENOMINATOR(CONFIG_NUMBER), 0},\
-		{(16384*VELOCITY_Ki_NUMERATOR(CONFIG_NUMBER) )/VELOCITY_Ki_DENOMINATOR(CONFIG_NUMBER), 0},\
-		{(16384*VELOCITY_Kd_NUMERATOR(CONFIG_NUMBER) )/VELOCITY_Kd_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*VELOCITY_Kp_NUMERATOR(CONFIG_NUMBER) )/VELOCITY_Kp_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*VELOCITY_Ki_NUMERATOR(CONFIG_NUMBER) )/VELOCITY_Ki_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*VELOCITY_Kd_NUMERATOR(CONFIG_NUMBER) )/VELOCITY_Kd_DENOMINATOR(CONFIG_NUMBER), 0},\
 		\
-		{(16384*POSITION_Kp_NUMERATOR(CONFIG_NUMBER) )/POSITION_Kp_DENOMINATOR(CONFIG_NUMBER), 0},\
-		{(16384*POSITION_Ki_NUMERATOR(CONFIG_NUMBER) )/POSITION_Ki_DENOMINATOR(CONFIG_NUMBER), 0},\
-		{(16384*POSITION_Kd_NUMERATOR(CONFIG_NUMBER) )/POSITION_Kd_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*POSITION_Kp_NUMERATOR(CONFIG_NUMBER) )/POSITION_Kp_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*POSITION_Ki_NUMERATOR(CONFIG_NUMBER) )/POSITION_Ki_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*POSITION_Kd_NUMERATOR(CONFIG_NUMBER) )/POSITION_Kd_DENOMINATOR(CONFIG_NUMBER), 0},\
 		\
-		{(16384*TORQUE_Kp_NUMERATOR(CONFIG_NUMBER) )/TORQUE_Kp_DENOMINATOR(CONFIG_NUMBER), 0},\
-		{(16384*TORQUE_Ki_NUMERATOR(CONFIG_NUMBER) )/TORQUE_Ki_DENOMINATOR(CONFIG_NUMBER), 0},\
-		{(16384*TORQUE_Kd_NUMERATOR(CONFIG_NUMBER) )/TORQUE_Kd_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*TORQUE_Kp_NUMERATOR(CONFIG_NUMBER) )/TORQUE_Kp_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*TORQUE_Ki_NUMERATOR(CONFIG_NUMBER) )/TORQUE_Ki_DENOMINATOR(CONFIG_NUMBER), 0},\
+		{(65536*TORQUE_Kd_NUMERATOR(CONFIG_NUMBER) )/TORQUE_Kd_DENOMINATOR(CONFIG_NUMBER), 0},\
 		\
 		{MIN_POSITION_LIMIT(CONFIG_NUMBER),0},\
 		{MAX_POSITION_LIMIT(CONFIG_NUMBER),0},\
@@ -179,6 +149,14 @@ ec_sync_info_t ctrlproto_syncs[] = {\
 		{0, 0},\
 		{0, 0},\
 		{0, 0},\
+		\
+		{COMMUTATION_OFFSET_CLK(CONFIG_NUMBER), 0},\
+		{COMMUTATION_OFFSET_CCLK(CONFIG_NUMBER), 0},\
+		{WINDING_TYPE(CONFIG_NUMBER), 0},\
+		\
+		{LIMIT_SWITCH_TYPES(CONFIG_NUMBER), 0},\
+		{HOMING_METHOD(CONFIG_NUMBER), 0},\
+		{QEI_SENSOR_POLARITY(CONFIG_NUMBER), 0},\
 		\
 		0},\
 		0.0f,\
@@ -207,7 +185,7 @@ typedef struct
 	 * The SDO entries
 	 */
 
-	ec_sdo_request_t *__request[31];
+	ec_sdo_request_t *__request[34];
 
 	/**
 	 * The PDO entries
@@ -263,7 +241,7 @@ typedef struct
 	/**
 	 * outgoing commands
 	 */
-	int16_t motorctrl_out;				/*only 16 bits valid*/
+	uint16_t motorctrl_out;				/*only 16 bits valid*/
 
 	/**
 	 * outgoing torque (use fromFloatFunction to set it)
@@ -283,12 +261,12 @@ typedef struct
 	/**
 	 * outgoing modes of operation
 	 */
-	int8_t operation_mode;				/*only 8 bits valid*/
+	uint8_t operation_mode;				/*only 8 bits valid*/
 
 	/**
 	 * incoming motorctrl command (readback)
 	 */
-	int16_t motorctrl_status_in;		/*only 16 bits valid*/
+	uint16_t motorctrl_status_in;		/*only 16 bits valid*/
 
 	/**
 	 * incoming torque
@@ -308,7 +286,7 @@ typedef struct
 	/**
 	 * incoming display mode of operation
 	 */
-	int8_t operation_mode_disp;		/*only 8 bits valid*/
+	uint8_t operation_mode_disp;		/*only 8 bits valid*/
 
 	/**
 	 * motor config struct
@@ -316,6 +294,12 @@ typedef struct
 	motor_config motor_config_param; /*set via bldc_motor_config header file*/
 
 	float factor_torq;
+
+	profile_position_param profile_position_params;
+
+	profile_linear_param profile_linear_params;
+
+	profile_velocity_param profile_velocity_params;
 
 }ctrlproto_slv_handle;
 
@@ -396,9 +380,9 @@ master_setup_variables_t master_setup={\
 /**
  * Initialises the Master and Slave communication
  *
- * \param master_setup 			A struct containing the variables for the master
- * \param slv_handles 			The handle struct for the slaves
- * \param total_no_of_slaves 	Number of connected slaves to the master
+ * @param master_setup 			A struct containing the variables for the master
+ * @param slv_handles 			The handle struct for the slaves
+ * @param total_no_of_slaves 	Number of connected slaves to the master
  */
 void init_master(master_setup_variables_t *master_setup,
 				 ctrlproto_slv_handle *slv_handles,
@@ -409,9 +393,9 @@ void init_master(master_setup_variables_t *master_setup,
  * it wraps around the master loop around the functions standing
  * below.
  *
- * \param master_setup 			A struct containing the variables for the master
- * \param slv_handles 			The handle struct for the slaves
- * \param total_no_of_slaves 	Number of connected slaves to the master
+ * @param master_setup 			A struct containing the variables for the master
+ * @param slv_handles 			The handle struct for the slaves
+ * @param total_no_of_slaves 	Number of connected slaves to the master
  */
 void pdo_handle_ecat(master_setup_variables_t *master_setup,
         			ctrlproto_slv_handle *slv_handles,
@@ -420,10 +404,10 @@ void pdo_handle_ecat(master_setup_variables_t *master_setup,
 /**
  * This function updates the motor parameters via ethercat
  *
- * \param master_setup 			A struct containing the variables for the master
- * \param slv_handles 			The handle array for the slaves *
- * \param update_sequence       Specify set of motor parameter to be configured
- * \param slave_number			Specify the slave number to which the motor is connected
+ * @param master_setup 			A struct containing the variables for the master
+ * @param slv_handles 			The handle array for the slaves *
+ * @param update_sequence       Specify set of motor parameter to be configured
+ * @param slave_number			Specify the slave number to which the motor is connected
  */
 void sdo_handle_ecat(master_setup_variables_t *master_setup,
         			ctrlproto_slv_handle *slv_handles,

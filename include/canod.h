@@ -1,40 +1,7 @@
 
 /**
- *
- * \file canod.h
- *
- * \brief Handle CAN object dictionary
- *
- * Copyright (c) 2014, Synapticon GmbH
- * All rights reserved.
- * Author: Frank Jeschke <jeschke@fjes.de>
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
- * 3. Execution of this software or parts of it exclusively takes place on hardware
- *    produced by Synapticon GmbH.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * The views and conclusions contained in the software and documentation are those
- * of the authors and should not be interpreted as representing official policies,
- * either expressed or implied, of the Synapticon GmbH.
- *
+ * @file canod.h
+ * @brief Handle CAN object dictionary
  */
 
 /* Roadmap: this object dictionary should be more dynamically and more general */
@@ -122,7 +89,14 @@
 #define CIA402_POSITIVE_TORQUE_LIMIT    0x60E0
 #define CIA402_NEGATIVE_TORQUE_LIMIT    0x60E1
 #define CIA402_MAX_ACCELERATION 		0x60C5
-
+#define CIA402_HOMING_METHOD			0x6098
+#define CIA402_HOMING_SPEED				0x6099
+#define CIA402_HOMING_ACCELERATION		0x609A
+#define LIMIT_SWITCH_TYPE 				0x2000
+#define COMMUTATION_OFFSET_CLKWISE		0x2001
+#define COMMUTATION_OFFSET_CCLKWISE		0x2002
+#define MOTOR_WINDING_TYPE				0x2003
+#define SENSOR_POLARITY					0x2004
 #define CIA402_MOTOR_TYPE               0x6402
 #define CIA402_MOTOR_SPECIFIC           0x6410 /* Sub 01 = nominal current
 	                                          Sub 02 = ???

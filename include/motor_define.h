@@ -1,39 +1,8 @@
 
 /**
- *
- * \file motor_define.h
- *
- *
- * Copyright (c) 2014, Synapticon GmbH
- * All rights reserved.
- * Author: Pavan Kanajar <pkanajar@synapticon.com>
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
- * 3. Execution of this software or parts of it exclusively takes place on hardware
- *    produced by Synapticon GmbH.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * The views and conclusions contained in the software and documentation are those
- * of the authors and should not be interpreted as representing official policies,
- * either expressed or implied, of the Synapticon GmbH.
- *
+ * @file motor_define.h
+ * @brief Motor Config Struct definitions
+ * @author Pavan Kanajar <pkanajar@synapticon.com>
  */
 
 #ifndef MOTOR_DEFINE_H_
@@ -197,6 +166,42 @@ typedef struct
 
 typedef struct
 {
+	int commutation_offset_clk;
+	int update_state;
+} commutation_offset_clk_s;
+
+typedef struct
+{
+	int commutation_offset_cclk;
+	int update_state;
+} commutation_offset_cclk_s;
+
+typedef struct
+{
+	int motor_winding_type;
+	int update_state;
+} motor_winding_type_s;
+
+typedef struct
+{
+	int limit_switch_type;
+	int update_state;
+} limit_switch_type_s;
+
+typedef struct
+{
+	int homing_method;
+	int update_state;
+} homing_method_s;
+
+typedef struct
+{
+	int sensor_polarity;
+	int update_state;
+} sensor_polarity_s;
+
+typedef struct
+{
 	pole_pair_s s_pole_pair;
 	gear_ratio_s s_gear_ratio;
 	nominal_motor_speed_s s_nominal_motor_speed;
@@ -236,6 +241,13 @@ typedef struct
 	qei_commutation_offset_clk_s s_qei_commutation_offset_clk;
 	qei_commutation_offset_cclk_s s_qei_commutation_offset_cclk;
 
+	commutation_offset_clk_s s_commutation_offset_clk;
+	commutation_offset_cclk_s s_commutation_offset_cclk;
+	motor_winding_type_s s_motor_winding_type;
+
+	limit_switch_type_s s_limit_switch_type;
+	homing_method_s s_homing_method;
+	sensor_polarity_s s_sensor_polarity;
 	int update_flag;
 } motor_config;
 
@@ -281,6 +293,13 @@ typedef struct
 #define PROFILE_DECELERATION(n)  	PROFILE_DECELERATION_##n
 #define QUICK_STOP_DECELERATION(n) 	QUICK_STOP_DECELERATION_##n
 
+#define COMMUTATION_OFFSET_CLK(n) 	COMMUTATION_OFFSET_CLK_##n
+#define COMMUTATION_OFFSET_CCLK(n) 	COMMUTATION_OFFSET_CCLK_##n
+#define WINDING_TYPE(n) 			WINDING_TYPE_##n
+
+#define HOMING_METHOD(n) 			HOMING_METHOD_##n
+#define LIMIT_SWITCH_TYPES(n) 		LIMIT_SWITCH_TYPES_##n
+#define QEI_SENSOR_POLARITY(n) 		QEI_SENSOR_POLARITY_##n
 
 #ifdef __cplusplus
 }
