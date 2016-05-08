@@ -85,6 +85,20 @@ link_directories(
 
 #specify include directories
 include_directories( include
+  include/config_motor_master
+  include/inc_ctrlproto-common
+  include/lib_linux_ctrlproto
+  include/lib_linux_motor_drive
+  include/module_ethercat/include
+  include/module_misc/include
+  include/module_motorcontrol/include
+  include/module_profile/include
+  include/module_pwm_symmetrical/common
+  include/module_gpio/include
+  include/module_hall/include
+  include/module_ams_rotary_sensor/include
+  include/module_biss/include
+  include/module_qei/include
   /opt/etherlab/include
   ${catkin_INCLUDE_DIRS}
   ${Boost_INCLUDE_DIRS}
@@ -92,25 +106,27 @@ include_directories( include
 
 #Add ctrlproto as library
 add_library(sncn_ctrlproto
-   include/ctrlproto_m.h
-   include/motor_define.h
-   src/ctrlproto_m.c
+   include/lib_linux_ctrlproto/ctrlproto_m.h
+   include/lib_linux_ctrlproto/motor_define.h
+   include/lib_linux_ctrlproto/xccompat.h
+   include/module_ethercat/include/canod.h
+   src/module_ethercat/src/canod_datatypes.h
+   src/lib_linux_ctrlproto/ctrlproto_m.c
 )
 
+#Add motor drive library
 add_library(linux_motor_drive
-   include/ctrlproto_m.h
-   include/canod.h
-   include/canod_datatypes.h
-   include/drive_function.h
-   include/profile_control.h
-   src/ctrlproto_m.c
-   src/profile_linear.c
-   src/profile_position.c
-   src/drive_function.c
-   src/profile_velocity.c
-   src/profile_position.c
-   src/profile_position_quick-stop.c
-   src/profile_velocity_quick-stop.c
+   include/lib_linux_motor_drive/drive_function.h
+   src/lib_linux_motor_drive/drive_function.c
+)
+
+#Add profile generators as a library
+add_library(profilers
+   src/module_profile/profile_linear_mode/profile_linear.c
+   src/module_profile/profile_velocity_mode/profile_velocity.c
+   src/module_profile/profile_position_mode/profile_position.c
+   src/module_profile/quick_stop_mode/profile_position_quick-stop.c
+   src/module_profile/quick_stop_mode/profile_velocity_quick-stop.c
 )
 
 #Link ethercat to ctrlproto
@@ -125,6 +141,7 @@ target_link_libraries(ros_master_app
 ethercat 
 sncn_ctrlproto
 linux_motor_drive
+profilers
 ${catkin_LIBRARIES}
 )
 
