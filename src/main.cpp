@@ -146,6 +146,9 @@ void ecat_master()
                  /* Update step */
                  inc[i]++;
              }
+             else if(desired_velocity[i] == 0 ) {
+                 set_velocity_rpm(0, i, slv_handles);
+             }
 
              actual_velocity[i] = get_velocity_actual_rpm(i, slv_handles);
              desired_velocity_old[i] = desired_velocity[i];
