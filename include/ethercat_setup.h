@@ -11,20 +11,26 @@
 /**
  * Number of SOMANET Slaves
  */
-#define TOTAL_NUM_OF_SLAVES 1
+#define TOTAL_NUM_OF_SLAVES 4
 
 SOMANET_C22_CTRLPROTO_CSTRUCT();
 
 //Slave Handles Array
 static ctrlproto_slv_handle slv_handles[]=
 {												//ALIAS / POSITION / CONFIG_NUMBER
-		SOMANET_C22_CTRLPROTO_SLAVE_HANDLES_ENTRY(0,             0, 	1)
+		SOMANET_C22_CTRLPROTO_SLAVE_HANDLES_ENTRY(0,             0, 	1),
+		SOMANET_C22_CTRLPROTO_SLAVE_HANDLES_ENTRY(0,             1, 	1),
+		SOMANET_C22_CTRLPROTO_SLAVE_HANDLES_ENTRY(0,             2, 	1),
+		SOMANET_C22_CTRLPROTO_SLAVE_HANDLES_ENTRY(0,             3, 	1)
 };
 
 //Domain entries for the pdos
 const static ec_pdo_entry_reg_t domain_regs[] = {
 												//ALIAS / POSITION / ARRAY POSITION inside SLV_HANDLES
 		SOMANET_C22_CTRLPROTO_DOMAIN_REGS_ENTRIES(0,		0,			0),
+		SOMANET_C22_CTRLPROTO_DOMAIN_REGS_ENTRIES(0,		1,			1),
+		SOMANET_C22_CTRLPROTO_DOMAIN_REGS_ENTRIES(0,		2,			2),
+		SOMANET_C22_CTRLPROTO_DOMAIN_REGS_ENTRIES(0,		3,			3),
 {0}
 };
 
