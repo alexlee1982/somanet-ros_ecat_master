@@ -25,7 +25,7 @@ extern "C"
 #include "boost/thread.hpp"
 
 
-#include <geometry_msgs/Twist.h>
+#include <geometry_msgs/TwistStamped.h>
 #include <ros_ecat_master/MoveJoint.h>
 #include <ros_ecat_master/MotorState.h>
 boost::mutex mutex_ethercat_update;
@@ -34,18 +34,25 @@ boost::mutex mutex_ethercat_update;
 enum {ECAT_SLAVE_0, ECAT_SLAVE_1, ECAT_SLAVE_2, ECAT_SLAVE_3};
 
 ros::Publisher pub0;
+int desired_velocity[TOTAL_NUM_OF_SLAVES];
 
-void cb_move_joints(const geometry_msgs::TwistConstPtr &msg)
+void cb_command_velocity(const geometry_msgs::TwistStamped &vel)
 {
+
+	double wheelRadius = 0.0475;//in meters
+	double LengthBetweenFrontAndRearWheels = 0.47;//in meters
+	double LengthBetweenFrontWheels = 0.3;//in meters
+	double l1 = LengthBetweenFrontWheels/2.0;
+	double l2 = LengthBetweenFrontAndRearWheels/2.0;
+
 	mutex_ethercat_update.lock();
-//		if(msg->linear.x<1)
-//		{
-//			desired_speed=msg->linear.x*2000;
-//		}
-//		else
-//		{
-//			desired_speed=1*2000;
-//		}
+
+	desired_velocity[ECAT_SLAVE_0] = -1.0 * (-vel.twist.linear.x + vel.twist.linear.y - (l1 + l2) *  vel.twist.angular.z) / wheelRadius;
+	desired_velocity[ECAT_SLAVE_1] = -1.0 * (-vel.twist.linear.x - vel.twist.linear.y + (l1 + l2) * (-1.0) * vel.twist.angular.z) / wheelRadius;
+	desired_velocity[ECAT_SLAVE_2] = (-vel.twist.linear.x - vel.twist.linear.y - (l1 + l2) * (-1.0) * vel.twist.angular.z) / wheelRadius;
+	desired_velocity[ECAT_SLAVE_3] = (-vel.twist.linear.x + vel.twist.linear.y + (l1 + l2) * vel.twist.angular.z) / wheelRadius;
+	//_vel.header.stamp = vel.header.stamp;
+	//_vel.header.seq = vel.header.seq;
 
 	mutex_ethercat_update.unlock();
 }
@@ -63,9 +70,7 @@ void ecat_master()
     float actual_torque[TOTAL_NUM_OF_SLAVES]; // mNm
     int steps[TOTAL_NUM_OF_SLAVES];
     int inc[TOTAL_NUM_OF_SLAVES];
-    int velocity_ramp = 0; // rpm
 
-    int desired_velocity[TOTAL_NUM_OF_SLAVES];
     int desired_velocity_old[TOTAL_NUM_OF_SLAVES];
 
     for(int i = 0; i < TOTAL_NUM_OF_SLAVES; i++) {
@@ -101,11 +106,10 @@ void ecat_master()
       /* Update the process data (EtherCat packets) sent/received from the node */
       pdo_handle_ecat(&master_setup, slv_handles, TOTAL_NUM_OF_SLAVES);
 
+
       mutex_ethercat_update.lock();
-
-
-			if(master_setup.op_flag) /*Check if the master is active*/
-			{
+      if(master_setup.op_flag) /*Check if the master is active*/
+      {
 
           for (int i = 0; i < TOTAL_NUM_OF_SLAVES; i++ )
           {
@@ -171,7 +175,7 @@ int main(int argc, char **argv)
 {
 	ros::init(argc, argv, "ethercatExampleNode");
 	ros::NodeHandle n("~");
-	ros::Subscriber sub0=n.subscribe("/ecat",1, cb_move_joints);
+	ros::Subscriber sub0=n.subscribe("/command_velocity_joy",1, cb_command_velocity);
 	pub0=n.advertise<ros_ecat_master::MotorState>("/motor_state",1,0);
 	ecat_master();
 
