@@ -134,7 +134,7 @@ target_link_libraries(sncn_ctrlproto ethercat)
 
 #Define node
 add_executable(ros_master_app src/main.cpp)
-add_executable(control_joints src/control_joints.cpp)
+add_executable(control_base src/youbot_joy.cpp)
 
 #Link libraries to app
 target_link_libraries(ros_master_app 
@@ -145,7 +145,7 @@ profilers
 ${catkin_LIBRARIES}
 )
 
-target_link_libraries(control_joints 
+target_link_libraries(control_base 
 ${catkin_LIBRARIES}
 )
 

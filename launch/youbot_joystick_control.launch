@@ -1,0 +1,20 @@
+<launch>
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="joy_node" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+ <!-- Axes -->
+  <param name="axis_linear_X" value="1" type="int"/>
+  <param name="axis_linear_Y" value="0" type="int"/>
+  <param name="axis_angular" value="2" type="int"/>
+  <param name="scale_linear" value="1000" type="double"/>
+  <param name="scale_angular" value="3000" type="double"/>
+
+  <node pkg="ros_ecat_master" type="control_base" name="control_base"/>
+  <node pkg="ros_ecat_master" type="ros_master_app" name="ros_master_app"/>
+  
+</launch>
