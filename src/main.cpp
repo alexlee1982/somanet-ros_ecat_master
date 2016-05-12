@@ -146,7 +146,7 @@ void ecat_master()
                  /* Update step */
                  inc[i]++;
              }
-             else if(desired_velocity[i] == 0 ) {
+             else if((desired_velocity[i] == 0) && (inc[i] == steps[i])) {
                  set_velocity_rpm(0, i, slv_handles);
              }
 
