@@ -33,7 +33,7 @@ TeleopYouBot::TeleopYouBot()
 
   vel_pub_ = nh_.advertise<geometry_msgs::TwistStamped>("command_velocity_joy", 1);
 
-  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopYouBot::joyCallback, this);
+  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 1, &TeleopYouBot::joyCallback, this);
 
 }
 
@@ -50,7 +50,7 @@ int main(int argc, char** argv)
 {
   ros::init(argc, argv, "teleop_youbot");
   TeleopYouBot teleop_youbot;
-  ros::Rate loop_rate(100);
+  ros::Rate loop_rate(10);
    
   while (ros::ok())
   {
