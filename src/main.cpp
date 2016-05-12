@@ -35,6 +35,7 @@ enum {ECAT_SLAVE_0, ECAT_SLAVE_1, ECAT_SLAVE_2, ECAT_SLAVE_3};
 
 ros::Publisher pub0;
 int desired_velocity[TOTAL_NUM_OF_SLAVES];
+geometry_msgs::TwistStamped vel_;
 
 void cb_command_velocity(const geometry_msgs::TwistStamped &vel)
 {
@@ -51,19 +52,38 @@ void cb_command_velocity(const geometry_msgs::TwistStamped &vel)
 	desired_velocity[ECAT_SLAVE_1] = -1.0 * (-vel.twist.linear.x - vel.twist.linear.y + (l1 + l2) * (-1.0) * vel.twist.angular.z) / wheelRadius;
 	desired_velocity[ECAT_SLAVE_2] = (-vel.twist.linear.x - vel.twist.linear.y - (l1 + l2) * (-1.0) * vel.twist.angular.z) / wheelRadius;
 	desired_velocity[ECAT_SLAVE_3] = (-vel.twist.linear.x + vel.twist.linear.y + (l1 + l2) * vel.twist.angular.z) / wheelRadius;
-	//_vel.header.stamp = vel.header.stamp;
-	//_vel.header.seq = vel.header.seq;
+	vel_.header.stamp = vel.header.stamp;
+	vel_.header.seq = vel.header.seq;
 
 	mutex_ethercat_update.unlock();
 }
+
+
+void watchdog(const ros::TimerEvent &e)
+{
+	ros::Time now = ros::Time::now();
+	double secs = now.toSec();
+	if ((now - vel_.header.stamp) > ros::Duration(1.0))
+	{
+		ROS_WARN("Something is wrong with connection!");
+		//Emergency stop
+		for (int i = 0; i < TOTAL_NUM_OF_SLAVES; i++ )
+		{
+			desired_velocity[i] = 0;
+		}
+	}
+
+
+}
+
 
 void ecat_master()
 {
 
     ros::Rate r(1000); // 1000 hz
 
-    int acceleration = 1000; //rpm/s
-    int deceleration = 1000; //rpm/s
+    int acceleration = 3000; //rpm/s
+    int deceleration = 3000; //rpm/s
 
     int actual_velocity[TOTAL_NUM_OF_SLAVES]; // rpm
     int actual_position[TOTAL_NUM_OF_SLAVES]; // ticks
@@ -100,8 +120,6 @@ void ecat_master()
 
     while(ros::ok())
     {
-      ros::spinOnce();
-      r.sleep();
 
       /* Update the process data (EtherCat packets) sent/received from the node */
       pdo_handle_ecat(&master_setup, slv_handles, TOTAL_NUM_OF_SLAVES);
@@ -134,7 +152,6 @@ void ecat_master()
           }
 
       }
-
       mutex_ethercat_update.unlock();
 
       /* Publish actual values from the slaves */
@@ -144,6 +161,10 @@ void ecat_master()
       msg.actual_torque=actual_torque[ECAT_SLAVE_0];
 
 			pub0.publish(msg);
+
+      ros::spinOnce();
+      r.sleep();
+
 		}
 
 		for (int i = 0; i < TOTAL_NUM_OF_SLAVES; i++ ) {
@@ -176,6 +197,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "ethercatExampleNode");
 	ros::NodeHandle n("~");
 	ros::Subscriber sub0=n.subscribe("/command_velocity_joy",1, cb_command_velocity);
+	ros::Timer watchdog_timer = n.createTimer(ros::Duration(1.0), watchdog);
 	pub0=n.advertise<ros_ecat_master::MotorState>("/motor_state",1,0);
 	ecat_master();
 
