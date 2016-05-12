@@ -11,7 +11,7 @@
  * Define Motor Specific Constants (found in motor specification sheet)
  * Mandatory constants to be set
  */
-#define POLE_PAIRS_1  				2	 	// Number of pole pairs
+#define POLE_PAIRS_1  				8	 	// Number of pole pairs
 #define MAX_NOMINAL_SPEED_1  			4000	// rpm
 #define MAX_NOMINAL_CURRENT_1  			2		// A
 #define MOTOR_TORQUE_CONSTANT_1			72		// mNm/A
@@ -36,8 +36,8 @@
 #define QEI_SENSOR_POLARITY_1           QEI_POLARITY_NORMAL
 
 /* Commutation offset (range 0-4095) (HALL sensor based commutation) */
-#define COMMUTATION_OFFSET_CLK_1        3835
-#define COMMUTATION_OFFSET_CCLK_1       316
+#define COMMUTATION_OFFSET_CLK_1        1877
+#define COMMUTATION_OFFSET_CCLK_1       2145
 
 /* Motor Winding type (STAR_WINDING/DELTA_WINDING) */
 #define WINDING_TYPE_1                  STAR_WINDING
