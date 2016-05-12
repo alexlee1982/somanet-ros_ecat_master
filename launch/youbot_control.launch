@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="ros_ecat_master" type="ros_master_app" name="ros_master_app"/>
+  
+</launch>
