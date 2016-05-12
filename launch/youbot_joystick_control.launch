@@ -8,8 +8,8 @@
   </node>
 
  <!-- Axes -->
-  <param name="axis_linear_X" value="1" type="int"/>
-  <param name="axis_linear_Y" value="0" type="int"/>
+  <param name="axis_linear_X" value="0" type="int"/>
+  <param name="axis_linear_Y" value="1" type="int"/>
   <param name="axis_angular" value="2" type="int"/>
   <param name="scale_linear" value="1000" type="double"/>
   <param name="scale_angular" value="3000" type="double"/>
